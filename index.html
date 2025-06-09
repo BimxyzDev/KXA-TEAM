@@ -15,16 +15,32 @@
       height: auto;
       margin-top: 50px;
     }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
   <img src="https://files.catbox.moe/xmxn5v.jpg" alt="KXA TEAM Logo">
 
-  <audio autoplay loop>
-    <source src="https://files.catbox.moe/tcfy2p.mp3" type="audio/mp3">
-    Browser kamu tidak mendukung pemutar audio.
+  <br>
+  <button onclick="playMusic()">🔊 Putar Musik</button>
+
+  <audio id="bgm" loop>
+    <source src="https://files.catbox.moe/tcfy2p.mp3" type="audio/mpeg">
+    Browser kamu tidak support audio.
   </audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('bgm');
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
